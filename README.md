@@ -19,6 +19,7 @@ glEnableVertexAttribArray(0);
 <div align=center>
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png" width="200" height="200">
 </div>
+
 ## 02_GLSL
 GLSL学习，并且实现了不同着色器渲染不同三角形
 
