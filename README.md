@@ -17,13 +17,16 @@
 glEnableVertexAttribArray(0);
 ```
 <div align=center>
-<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png" width="200" height="200">
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png" width="400" height="400">
 </div>
 
 ## 02_GLSL
 GLSL学习，并且实现了不同着色器渲染不同三角形
 
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png =100x100)
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png" width="400" height="400">
+</div>
+
 ## 03_GLSL
 
 实现了在一个数组中按照自定义规则设置顶点属性指针
@@ -36,8 +39,9 @@ uniform、glUniform1i 和 glGetUniformLocation 的使用
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void *)(3*sizeof(float)));
     glEnableVertexAttribArray(1);
 ```
-
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/tri_color.png)
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/tri_color.png" width="400" height="400">
+</div>
 
 ## 04_GLSL
 实现了shader.h头文件编写，不必再字符串流动态编译了。
@@ -46,4 +50,7 @@ uniform、glUniform1i 和 glGetUniformLocation 的使用
 
 实现了根据时间变化位置的三角形。
 
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/moving_tri4.gif)
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/moving_tri4.gif" width="400" height="400">
+</div>
+
