@@ -16,7 +16,7 @@
 //参数0表示顶点属性数组的索引。
 glEnableVertexAttribArray(0);
 ```
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png)
+![](https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png width="200" height="200")
 
 ## 02_GLSL
 GLSL学习，并且实现了不同着色器渲染不同三角形
