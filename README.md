@@ -43,7 +43,7 @@ uniform、glUniform1i 和 glGetUniformLocation 的使用
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/tri_color.png" width="400" height="400">
 </div>
 
-## 04_GLSL
+## 04_shader_class
 实现了shader.h头文件编写，不必再字符串流动态编译了。
 
 编写glsl文件并且根据它们穿见着色器。
