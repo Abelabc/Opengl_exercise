@@ -16,12 +16,13 @@
 //参数0表示顶点属性数组的索引。
 glEnableVertexAttribArray(0);
 ```
+<div align=center>
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png" width="200" height="200">
-
+</div>
 ## 02_GLSL
 GLSL学习，并且实现了不同着色器渲染不同三角形
 
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png)
+![](https://github.com/Abelabc/learn_opengl/blob/main/pic/two_triangle.png =100x100)
 ## 03_GLSL
 
 实现了在一个数组中按照自定义规则设置顶点属性指针
