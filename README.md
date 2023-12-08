@@ -69,5 +69,5 @@ uniform、glUniform1i 和 glGetUniformLocation 的使用
 ```
 
 <div align=center>
-<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/moving_tri4.gif" width="400" height="400">
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mix_tex.png" width="400" height="400">
 </div>
