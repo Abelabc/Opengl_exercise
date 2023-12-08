@@ -54,3 +54,20 @@ uniform、glUniform1i 和 glGetUniformLocation 的使用
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/moving_tri4.gif" width="400" height="400">
 </div>
 
+## 05_texture
+
+实现了纹理贴图
+
+实现了多纹理贴图，在循环中调用以下代码进行组合
+
+```
+      glActiveTexture(GL_TEXTURE0);
+      glBindTexture(GL_TEXTURE_2D, texture1);
+
+      glActiveTexture(GL_TEXTURE1);
+      glBindTexture(GL_TEXTURE_2D, texture2);
+```
+
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/moving_tri4.gif" width="400" height="400">
+</div>
