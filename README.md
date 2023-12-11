@@ -83,14 +83,16 @@ scale函数参数分别为矩阵、各方向比例向量
 	trans = glm::rotate(trans,  (float)(glm::radians(30.f*glfwGetTime())), glm::vec3(0.0, 0.0, 1.0));
         trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
 ```
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/glm_rotate.gif" width="400" height="400"><img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/scale.gif" width="400" height="400">
+</div>
 
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/glm_rotate.mp4) ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/scale.mp4)
 
 ## 07_3D
 
 学习MVP变换
 <div align=center>
-<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/tuto.png" width="400" height="400">
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/tuto.png" width="400" height="300">
 </div>
 实现了model、view、projection三种矩阵，左乘矩阵就是对应变化
 ```
@@ -107,5 +109,6 @@ scale函数参数分别为矩阵、各方向比例向量
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
         ourShader.setTrans("projection",1, projection);
 ```
-
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.mp4) ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.avi)
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.gif" width="400" height="400"><img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.gif" width="400" height="400">
+</div>
