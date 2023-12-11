@@ -83,6 +83,7 @@ scale函数参数分别为矩阵、各方向比例向量
 	trans = glm::rotate(trans,  (float)(glm::radians(30.f*glfwGetTime())), glm::vec3(0.0, 0.0, 1.0));
         trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
 ```
+
 ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/glm_rotate.mp4) ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/scale.mp4)
 
 ## 07_3D
