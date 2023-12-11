@@ -95,6 +95,7 @@ scale函数参数分别为矩阵、各方向比例向量
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/tuto.png" width="400" height="300">
 </div>
 实现了model、view、projection三种矩阵，左乘矩阵就是对应变化
+
 ```
         float time = glfwGetTime();
         glm::mat4 model         = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
@@ -109,6 +110,7 @@ scale函数参数分别为矩阵、各方向比例向量
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
         ourShader.setTrans("projection",1, projection);
 ```
+
 <div align=center>
-<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.gif" width="400" height="400"><img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.gif" width="400" height="400">
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.png" width="400" height="400"><img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.gif" width="400" height="400">
 </div>
