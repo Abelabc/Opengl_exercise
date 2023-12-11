@@ -107,4 +107,5 @@ scale函数参数分别为矩阵、各方向比例向量
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
         ourShader.setTrans("projection",1, projection);
 ```
-![](https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.mp4) ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.mp4)
+
+![](https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.mp4) ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.avi)
