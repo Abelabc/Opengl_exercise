@@ -9,6 +9,9 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 
 class Shader
@@ -108,11 +111,16 @@ public:
         glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
     }
     void setFloat(const std::string &name, float value) const{
-        glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
+        glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
     }
     void setVec2(const std::string &name,  int n, float value[] ) const{
         glUniform1fv(glGetUniformLocation(ID, name.c_str()), n, value);
     }
+    void setTrans(const std::string &name,  int n, glm::mat4 trans ) const{
+        unsigned int transformLoc = glGetUniformLocation(ID, name.c_str());
+        glUniformMatrix4fv(transformLoc, n, GL_FALSE, glm::value_ptr(trans));
+    }
+
 
 };
 #endif //LEARN_OPENGL_SHADER_H

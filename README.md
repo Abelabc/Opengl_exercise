@@ -71,3 +71,39 @@ uniform、glUniform1i 和 glGetUniformLocation 的使用
 <div align=center>
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mix_tex.png" width="400" height="400">
 </div>
+
+## 06_GLM
+
+练习了glm的一些操作：
+
+rotate函数参数分别为矩阵、参数、旋转轴
+
+scale函数参数分别为矩阵、各方向比例向量
+```
+	trans = glm::rotate(trans,  (float)(glm::radians(30.f*glfwGetTime())), glm::vec3(0.0, 0.0, 1.0));
+        trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
+```
+![](https://github.com/Abelabc/learn_opengl/blob/main/pic/glm_rotate.mp4) ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/scale.mp4)
+
+## 07_3D
+
+学习MVP变换
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/tuto.png" width="400" height="400">
+</div>
+实现了model、view、projection三种矩阵，左乘矩阵就是对应变化
+```
+        float time = glfwGetTime();
+        glm::mat4 model         = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
+        glm::mat4 view          = glm::mat4(1.0f);
+        glm::mat4 projection    = glm::mat4(1.0f);
+        model = glm::rotate(model, (float)time*glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+        view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+        projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+        unsigned int viewLoc  = glGetUniformLocation(ourShader.ID, "view");
+        // pass them to the shaders (3 different ways)
+        ourShader.setTrans("model",1, model);
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
+        ourShader.setTrans("projection",1, projection);
+```
+![](https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.mp4) ![](https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.mp4)

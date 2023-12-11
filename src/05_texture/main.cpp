@@ -9,6 +9,7 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 void processInput(GLFWwindow *window);
+float mixValue=0.2f;
 int main()
 {
     glfwInit();
@@ -116,6 +117,7 @@ int main()
 
     Shader ourShader("./src/05_texture/shader/vertexshader.glsl", "./src/05_texture/shader/fragmentshader.glsl");
     ourShader.use();
+
     ourShader.setInt("texture1", 0);
     ourShader.setInt("texture2", 1);
     // 设置线框绘制模式
@@ -131,21 +133,22 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         ourShader.use();
+
+        float time = glfwGetTime();
+        mixValue=abs(sin(time));
+        ourShader.setFloat("mixValue", mixValue);
+
+        glBindVertexArray(VAO); // 不需要每次都绑定，对于当前程序其实只需要绑定一次就可以了
+
+        // glDrawArrays(GL_POINTS, 0, 6);
+        // glDrawArrays(GL_LINE_LOOP, 0, 6);
+        //glDrawArrays(GL_TRIANGLES, 0, 3); // 顶点数组和打算绘制多少个顶点
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture1);
 
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
-
-        glBindVertexArray(VAO); // 不需要每次都绑定，对于当前程序其实只需要绑定一次就可以了
-        //float time = glfwGetTime();
-        //float xyoff[2] = {static_cast<float>(sin(2*time)), static_cast<float>(cos(2*time))};//time*2是为了变得更快
-        //ourShader.setVec2("xyoffset",2,xyoff );
-        // glDrawArrays(GL_POINTS, 0, 6);
-        // glDrawArrays(GL_LINE_LOOP, 0, 6);
-        //glDrawArrays(GL_TRIANGLES, 0, 3); // 顶点数组和打算绘制多少个顶点
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
