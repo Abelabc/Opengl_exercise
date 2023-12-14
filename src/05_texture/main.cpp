@@ -82,11 +82,13 @@ int main()
     glBindVertexArray(0); // 解绑
 
     //创建纹理
+    stbi_set_flip_vertically_on_load(true);
     unsigned int texture1,texture2;
     int width, height, nrChannels;
-    unsigned char *data = stbi_load("./static/pic/wall.jpg", &width, &height, &nrChannels, 0);
+    unsigned char *data = stbi_load("./static/pic/cao.jpg", &width, &height, &nrChannels, 0);
     glGenTextures(1, &texture1);
     glBindTexture(GL_TEXTURE_2D, texture1);
+
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
