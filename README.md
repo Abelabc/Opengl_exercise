@@ -114,3 +114,23 @@ scale函数参数分别为矩阵、各方向比例向量
 <div align=center>
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mvp.png" width="400" height="400"><img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/3D_rotate.gif" width="400" height="400">
 </div>
+
+### 08_imgui
+
+使用imgui完成帧率输出和滑动改变f值的功能
+
+
+
+### 09_lookat
+
+熟悉摄像机坐标系统，完成了：
+
+1.使的摄像机以一定的半径绕着（0,0,0）旋转
+
+2.完成了framebuffer_size_callback函数，使键盘wsad可以控制摄像机移动
+
+3.完成了mouse_callback\scroll_callback函数，使得检索到鼠标移动和鼠标滚轮改变pitch和yaw角，并用滚轮改变视野fov角。
+
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mouse.gif" width="400" height="300">
+</div>
