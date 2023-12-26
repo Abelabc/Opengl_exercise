@@ -134,3 +134,26 @@ scale函数参数分别为矩阵、各方向比例向量
 <div align=center>
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mouse.gif" width="400" height="300">
 </div>
+
+10_lighting
+
+学习光照基础
+
+1.phong lighting model
+
+Ambient+Diffuse+Specular
+
+2.Front，up，right
+
+front是根据pitch角和yaw角推断出来的
+
+```
+Right = glm::normalize(glm::cross(Front, WorldUp));  // normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
+Up    = glm::normalize(glm::cross(Right, Front));
+```
+
+
+
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/light.gif" width="400" height="300">
+</div>
