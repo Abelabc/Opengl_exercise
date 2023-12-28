@@ -135,7 +135,7 @@ scale函数参数分别为矩阵、各方向比例向量
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/mouse.gif" width="400" height="300">
 </div>
 
-10_lighting
+### 10_lighting
 
 学习光照基础
 
@@ -157,3 +157,26 @@ Up    = glm::normalize(glm::cross(Right, Front));
 <div align=center>
 <img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/light.gif" width="400" height="300">
 </div>
+
+### 11_material
+
+
+
+当描述一个表面时，我们可以分别为三个光照分量定义一个材质颜色(Material Color)：环境光照(Ambient Lighting)、漫反射光照(Diffuse Lighting)和镜面光照(Specular Lighting)。
+
+
+
+光源对环境光、漫反射和镜面光分量也分别具有不同的强度。创建了一些光照属性来影响各个光照分量。我们希望为光照属性创建类似材质结构体的东西：
+
+
+
+### 12_lightingmap
+
+对模型进行diffuseMap和specularmap贴图，漫反射贴图：使用一张覆盖物体的图像，让我们能够逐片段索引其独立的颜色值。每个像素RGB对应漫反射颜色。
+
+镜面贴图：描述了物体表面对光源的镜面反射程度，（越黑反射越小，越白反射越大）。
+
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/map.gif" width="400" height="300">
+</div>
+
