@@ -115,7 +115,7 @@ int main()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     stbi_set_flip_vertically_on_load(true);
-    unsigned char *data= stbi_load("./static/pic/12.png", &width, &height, &nrChannels, 0);
+    unsigned char *data= stbi_load("./static/pic/jiang.png", &width, &height, &nrChannels, 0);
 
     if (data)
     {
