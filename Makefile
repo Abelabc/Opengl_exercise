@@ -26,7 +26,7 @@ INCLUDE	:= include
 
 # define lib directory
 LIB		:= lib
-LIBRARIES	:= -lglad -lglfw3dll
+LIBRARIES	:= -lglad -lglfw3dll -llibassimp
 
 ifeq ($(OS),Windows_NT)
 MAIN	:= glshow.exe

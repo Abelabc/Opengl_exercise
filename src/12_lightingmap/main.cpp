@@ -163,7 +163,7 @@ int  main(){
         glBindTexture(GL_TEXTURE_2D, specuMap);
         //lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
         //lightingShader.setVec3("lightColor",  1.0f, 1.0f, 1.0f);
-        lightingShader.setVec3("light.ambient",  0.2f, 0.2f, 0.2f);
+        lightingShader.setVec3("light.ambient",  0.5f, 0.5f, 0.5f);
         lightingShader.setVec3("light.diffuse",  0.5f, 0.5f, 0.5f); // 将光照调暗了一些以搭配场景
         lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
         lightingShader.setVec3("light.position", lightPos.x,lightPos.y,lightPos.z);
@@ -175,11 +175,13 @@ int  main(){
         lightingShader.setTrans("projection",1, projection);
         lightingShader.setTrans("view",1, view);
 
-        //lightingShader.setVec3("material.ambient",  1.0f, 0.5f, 0.31f);
-        //lightingShader.setVec3("material.diffuse",  1.0f, 0.5f, 0.31f);
-        lightingShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
-        lightingShader.setFloat("material.shininess", 64.0f);
-
+        lightingShader.setVec3("material.ambient",  0.2f, 0.2f, 0.2f);
+        lightingShader.setVec3("material.diffuse",  0.8f, 0.8f, 0.8f);
+        lightingShader.setVec3("material.specular", 2.f, 2.f, 2.f);
+        lightingShader.setFloat("light.constant", 1.0f);
+        lightingShader.setFloat("light.linear", 0.09f);
+        lightingShader.setFloat("material.shininess", 32.0f);
+        lightingShader.setFloat("light.quadratic", 0.032f);
         // world transformation
         glm::mat4 model = glm::mat4(1.0f);
         lightingShader.setTrans("model",1, model);
