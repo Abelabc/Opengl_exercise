@@ -118,7 +118,9 @@ scale函数参数分别为矩阵、各方向比例向量
 ### 08_imgui
 
 使用imgui完成帧率输出和滑动改变f值的功能
-
+<div align=center>
+<img src="https://github.com/Abelabc/learn_opengl/blob/main/pic/imgui.png" width="400" height="300">
+</div>
 
 
 ### 09_lookat
